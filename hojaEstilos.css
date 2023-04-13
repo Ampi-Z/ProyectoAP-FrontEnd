@@ -1,0 +1,11 @@
+body {
+    background-color: darkgray;
+    color: red;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+h1 {
+    font-size: 100px;
+}
