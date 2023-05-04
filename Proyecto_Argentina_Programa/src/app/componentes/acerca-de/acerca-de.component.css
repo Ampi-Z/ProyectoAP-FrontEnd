@@ -1,0 +1,28 @@
+.row {
+    padding: 25px;
+}
+
+div {
+    background-color: #ecd1ea;
+    text-align: center;
+    font: Satisfy ;
+}
+
+h1{
+    font-family: Satisfy;
+}
+
+img {
+    width: 150px;
+}
+
+@media (min-width:576px) {
+    img {
+        position: absolute;
+        width: 15%;
+        border-radius : 13% ;
+        box-shadow: 3px 3px 3px grey;
+        left:2% ;
+        top: 275px;
+    }
+}
