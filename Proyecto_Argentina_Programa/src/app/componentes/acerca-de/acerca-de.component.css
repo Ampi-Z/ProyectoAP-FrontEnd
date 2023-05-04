@@ -1,3 +1,18 @@
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('../../../assets/fuentes/Satisfy/Satisfy-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Rochester';
+    src: url('../../../assets/fuentes/Rochester/Rochester-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 .row {
     padding: 25px;
 }
@@ -5,11 +20,13 @@
 div {
     background-color: #ecd1ea;
     text-align: center;
-    font: Satisfy ;
+    font-family: Satisfy ;
+    color: #7192c4;
 }
 
 h1{
-    font-family: Satisfy;
+    font-family: Rochester;
+    color: #a5039a;
 }
 
 img {
@@ -17,7 +34,7 @@ img {
 }
 
 @media (min-width:576px) {
-    img {
+    #foto{
         position: absolute;
         width: 15%;
         border-radius : 13% ;
