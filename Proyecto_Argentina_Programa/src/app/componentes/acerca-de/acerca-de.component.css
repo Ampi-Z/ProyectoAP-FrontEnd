@@ -13,6 +13,13 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../assets/fuentes/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 .row {
     padding: 25px;
 }
@@ -24,13 +31,27 @@ div {
     color: #7192c4;
 }
 
+p{
+    font-family: Montserrat;
+}
+
 h1{
     font-family: Rochester;
     color: #a5039a;
 }
 
-img {
-    width: 150px;
+#descripcion{
+    text-align: left;
+    margin-left: 8%;
+}
+
+#nombre{
+    font-family: Satisfy;
+    margin-top: 40%;
+}
+
+#lover{
+    font-family: Satisfy;
 }
 
 @media (min-width:576px) {
@@ -38,8 +59,19 @@ img {
         position: absolute;
         width: 15%;
         border-radius : 13% ;
-        box-shadow: 3px 3px 3px grey;
+        box-shadow: 3px 3px 3px rgb(255, 167, 226);
         left:2% ;
         top: 275px;
+    }
+}
+
+@media (max-width:576px) {
+    #foto{
+        position: absolute;
+        width: 30%;
+        border-radius : 13% ;
+        box-shadow: 3px 3px 3px rgb(150, 170, 255);
+        left:35% ;
+        top: 375px;
     }
 }
