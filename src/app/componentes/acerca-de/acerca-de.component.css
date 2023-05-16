@@ -25,7 +25,9 @@
 }
 
 div {
-    background-color: #ecd1ea;
+    background-image: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #ecd1ea 0, 
+    #c53bbc 55.41%, #ec17ff 70.72%, #e421eb 79.34%, #f078e8 85.23%, #ec9fe9 92.56%, #c538d8 100%
+    );
     text-align: center;
     font-family: Satisfy ;
     color: #7192c4;
