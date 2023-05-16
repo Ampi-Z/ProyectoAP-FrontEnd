@@ -81,3 +81,7 @@ h2 , h3 {
     vertical-align: top;
     border-color: var(--bs-table-border-color);
 }
+
+#xp {
+    background-color: #f59abd;
+}

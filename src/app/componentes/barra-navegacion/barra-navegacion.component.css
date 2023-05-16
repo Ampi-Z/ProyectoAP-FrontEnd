@@ -1,6 +1,7 @@
 
 .container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -11,6 +12,7 @@
 #logoAP{
     width: 300px;
 }
+
 
 img{
     width: 75px;
