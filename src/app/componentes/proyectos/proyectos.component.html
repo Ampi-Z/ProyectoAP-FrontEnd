@@ -1,13 +1,27 @@
-<div class = "row">
+<section id="proyectos">
 
-    <h1>Proyectos</h1>
-    <div class = "contenedor">
-        <div class = "col-sm-12 col-md-7 col-lg-7 parte1">
-            <h1>Algo</h1>
-            <p>Duis excepteur culpa anim nulla eu. Ex amet quis nostrud qui sit voluptate cupidatat laboris minim sunt excepteur duis deserunt. Fugiat nulla reprehenderit nulla laborum aute sit ut. Incididunt consectetur Lorem excepteur quis nulla sunt irure reprehenderit ad laborum pariatur eiusmod dolore. Ut qui aliqua sit et ad ipsum ea tempor. Voluptate nostrud ad irure ea qui id exercitation labore consequat. Fugiat ullamco consectetur irure Lorem veniam dolore dolore nulla eiusmod mollit.</p>
-        </div>
-        <div class = "col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src = ""class = "img-fluid img-proyecto">
+    <div class = "row">
+        <h1>Proyectos</h1>
+
+        <div class = "contenedor">
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-primary" routerLink="/nuevoproyecto" *ngIf="isLogged">
+                    Nuevo Proyecto
+                </button>
+            </div>
+
+            <div class = "col-sm-12 col-md-7 col-lg-7 parte1">
+                <table class="table">
+                    <tbody>
+                        <tr  *ngFor="let Proyecto of proyectos" >
+                            <td class=".text-light"><b>{{Proyecto.nombre}}</b><br />{{Proyecto.periodo}}</td>
+                            <td class=".text-light">{{Proyecto.descripcion}} <br /><a *ngIf="Proyecto.enlace != ''" href="{{Proyecto.enlace}}" target="_blank">{{Proyecto.nombre}}</a></td>
+                            <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" routerLink="/editproyecto/{{Proyecto.id}}"><i class="fa fa-pencil-square" aria-hidden="true"  ></i>Editar</button></td>
+                            <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" (click)="delete(Proyecto.id)"><i class="fa fa-trash" aria-hidden="true"></i>Borrar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+</section>

@@ -1,0 +1,29 @@
+<nav class="navbar">
+    <div class = "row">
+        <div class = "container-fluid">
+            
+            <div class = "logo">
+                <img class="navbar-brand" src = "../../../assets/imagenes/APlogo.png" id = "logoAP">            
+            </div>
+
+            <div class = "redes" class="d-flex text-right">
+        
+                <ul id="accesos" class="d-flex text-right"  >
+                    <li class="nav-item" title="Instagram"><a href="https://www.instagram.com/ampi_z/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="nav-item" title="Facebook"><a href="https://www.facebook.com/amparo.zanardi/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="nav-item" title="LinkedIn"><a href="https://www.linkedin.com/in/amparo-zanardi-708320275/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="nav-item" title="GitHub"><a href="https://github.com/Ampi-Z" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="nav-item" id="login"><i title="Iniciar Sesión" id="i-login" *ngIf="!isLogged" class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#loginModal"></i></li>
+                    <li class="nav-item" id="logout"><i title="Cerrar Sesión" id="i-logOut" (click)="onLogout()" *ngIf="isLogged" class="fa-solid fa fa-sign-out"></i></li>            
+                </ul>
+
+            </div>
+
+        <!--    
+            <div class = "ingreso">
+                <button type="button" class = "btn btn-outline-light" (click) = "login()">Ingresar</button>
+            </div>
+        -->
+        </div>
+    </div>
+</nav>

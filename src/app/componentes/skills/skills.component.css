@@ -22,8 +22,29 @@
 .row{
     padding: 40px;
     background-color: #ecd1ea;
+    margin: 20px !important;
+    text-align: center;
 }
 
 div {
     background-color: #ecd1ea;
+}
+
+#skills{
+    position: static;
+    margin-bottom: 70px;
+}
+
+h3{
+    text-align: left;
+}
+
+#boton{
+    text-align: left;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

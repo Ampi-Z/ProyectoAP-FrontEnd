@@ -1,21 +1,32 @@
-<div class = "row">
-    <div class ="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-
-            <img src = "../../../assets/imagenes/foto.jpg" class = "img-fluid" id ="foto"> 
-
-    </div>
-    
-    <div class ="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id = "nombre">{{persona.nombre}} {{persona.apellido}}</p>
-        <p id = "lover">( Lover )</p>
-        <p>Full Stack Developer Junior</p>
-    </div>
-
-    <div class ="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <h1>Acerca de mi... (Speak Now)</h1>
-        <p id="descripcion" >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga cum repellendus iure sed, eveniet vel, quis asperiores odit sit hic, laudantium inventore quaerat dolorem corporis! Minus provident itaque sit cumque! (FEARLESS)
-        </p>
-    </div>
-
+<div class="center" *ngIf="!persona">
+    <h5>Aguardando datos de servidor externo...</h5>
+    <span class="loader"></span>
 </div>
+<section id="about" *ngIf="persona">
+    <div class = "row">
+        <div class ="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+
+                <!-- <img src = "../../../assets/imagenes/foto.jpg" class = "img-fluid" id ="foto">-->  
+                <img id="fotoCv" src="{{persona?.img}}" alt="FotoDePerfil"> 
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary col-1" routerLink="/editabout/1" *ngIf="isLogged">
+                Editar información personal
+            </button>
+            <div class="col-11"></div>
+        </div>
+        
+        <div class ="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <p id = "nombre"><b>{{persona?.nombre}} {{persona?.apellido}}</b>></p>
+            <p id = "lover">( Lover )</p>
+            <p>Full Stack Developer Junior</p>
+        </div>
+
+        <div class ="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <h1>Acerca de mi... (Speak Now)</h1>
+            <p id="descripcion" >
+                {{persona?.descripcion}} (FEARLESS)
+            </p>
+        </div>
+    </div>
+</section>

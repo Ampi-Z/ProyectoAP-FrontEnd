@@ -1,22 +1,21 @@
 
-<div class = "row"> 
-    
-    <h1>Educacion</h1>
-    <div class = "col-lg-1"></div>
-    <div class = "col-lg-11">
-        <ul>
-            <li>
-                <h2>Educación Secundaria Completa</h2>
-                <h3> ( 2019 )</h3>
-                <p>Bachiller en economia</p> 
-                <p>Instituto Integral Católico, Chivilcoy, Buenos Aires.</p>
-            </li>
-            <li>
-                <h2>Educacion de grado</h2>
-                <h3> ( en curso )</h3>
-                <p>Ingenieria en informatica</p>
-                <p>Universidad de Buenos Aires</p>
-            </li>
-        </ul>
+<section id="edu">
+    <div class="container">
+        <h3>Educación</h3>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">
+                Nueva Educación
+            </button>
+        </div>
+        <table class="table">
+            <tbody>
+                <tr  *ngFor="let Educacion of edu" >
+                    <td class=".text-light"><b>{{Educacion.periodoEdu}}</b></td>
+                    <td class=".text-light"><b>{{Educacion.nombreEdu}}</b><br />{{Educacion.descripcionEdu}}</td>
+                    <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" routerLink="/editedu/{{Educacion.id}}"><i class="fa fa-pencil-square" aria-hidden="true"  ></i> Editar</button></td>
+                    <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" (click)="delete(Educacion.id)"><i class="fa fa-trash" aria-hidden="true"></i> Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-</div>
+</section>
